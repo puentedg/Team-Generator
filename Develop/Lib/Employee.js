@@ -1,33 +1,25 @@
-const inquirer = require('inquirer');
-const fs = require('fs');
+class Employee {
+    constructor(name, id, email) {
+        this.name = name;
+        this.id = id;
+        this.email = email;
+    }
 
+    getName() {
+        return this.name;
+    }
 
-inquirer
-  .prompt([
-    {
-      type: 'input',
-      name: 'name',
-      message: 'What is your name?',
-    },
-      
-    {
-        type: 'input',
-        name: 'id',
-        message: 'Please, type your id number',
-      },
-    {
-        type: 'input',
-        name: 'email',
-        message: 'Enter your email address',
-      }
-  ])
+    getID() {
+        return this.id;
+    }
 
-  
-  .then((data) => {
-    const htmlContent = generateHTML(data);
+    getEmail() {
+        return this.email;
+    }
 
-    // const filename = `${data.title.toLowerCase().split(' ').join('')}.html`;
+    getRole() {
+        return "Employee";
+    }
+}
 
-    fs.writeFile(`team.html`, htmlContent, (err) =>
-      err ? console.log(err) : console.log('Your Team page is ready'));
-  });
+module.exports = Employee;
