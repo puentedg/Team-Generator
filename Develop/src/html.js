@@ -3,11 +3,11 @@ const Manager = require("../Lib/Manager")
 const generateHtml = function (team) {
 
 const createManager = (manager) => {
-    return `<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-header text-bg-primary p-3">
-      <h5 class="card-title">${manager.getName()}</h5>
-      <h6 class="card-subtitle">${manager.getRole()}</h6>
+    return `<div class="card bg-primary bg-gradient text-white" style="width: 18rem;">
+    <img src="./images/manager.png" class="card-img-top employee-icon" alt="manager icon">
+    <h5 class="card-title fs-3">${manager.getName()}</h5>
+    <div class="card-header text-bg-primary p-3"> 
+      <h6 class="card-subtitle fs-4">${manager.getRole()}</h6>
     </div>
     <div class="card-body">
         <ul>
@@ -19,32 +19,32 @@ const createManager = (manager) => {
   </div>`
 }
 const createEngineer = (engineer) => {
-    return `<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
+    return `<div class="card bg-primary bg-gradient text-white" style="width: 18rem;">
+    <img src="./images/engineer.png" class="card-img-top employee-icon" alt="engineer icon">
+    <h5 class="card-title fs-3">${engineer.getName()}</h5>
     <div class="card-header text-bg-primary p-3">
-      <h5 class="card-title">${engineer.getName()}</h5>
-      <h6 class="card-subtitle">${engineer.getRole()}</h6>
+      <h6 class="card-subtitle fs-4">${engineer.getRole()}</h6>
     </div>
     <div class="card-body">
         <ul>
         <li>ID: ${engineer.getID()}</li>
-        <li>Email: <a href="mailto:${manager.getEngineer()}">${manager.getEngineer()}</li></a>
-        <li>GitHub: ${engineer.getGithub()}</li>
+        <li>Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</li></a>
+        <li>GitHub:  <a href="https://github.com/${engineer.getGithub()}">${engineer.getGithub()}</li></a>
         </ul>
     </div>
   </div>`
 } 
 const createIntern = (intern) => {
-    return `<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-header text-bg-primary p-3">
-      <h5 class="card-title">${intern.getName()}</h5>
-      <h6 class="card-subtitle">${intern.getRole()}</h6>
+    return `<div class="card bg-primary bg-gradient text-white" style="width: 18rem;">
+    <img src="./images/intern.png" class="card-img-top employee-icon" alt="intern icon">
+    <h5 class="card-title fs-3">${intern.getName()}</h5>
+    <div class="card-header text-bg-primary p-3">  
+      <h6 class="card-subtitle fs-4">${intern.getRole()}</h6>
     </div>
     <div class="card-body">
         <ul>
         <li>ID: ${intern.getID()}</li>
-        <li>Email: <a href="mailto:${manager.getIntern()}">${manager.getIntern()}</li></a>
+        <li>Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</li></a>
         <li>School: ${intern.getSchool()}</li>
         </ul>
     </div>
@@ -79,9 +79,9 @@ template.push(team
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header>
-            <nav class="navbar" id="nav">
-                <span class="navbar-brand mb-0 h1 w-100 text-center" id="navbar-text">My Team</span>
+        <header class="mb-5">
+            <nav class="navbar">
+                <span class="h1 w-100 text-center mt-4" id="nav">My Team</span>
             </nav>
         </header>
         <main>

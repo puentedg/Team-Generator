@@ -1,0 +1,50 @@
+body{
+    background-image: url('./images/teamt.jpg');
+}
+header{
+    background-color: rgb(254, 246, 169);
+    height: 150px;
+    text-align: center;
+}
+h5 {
+    font-size: 26px;
+    align-items: center;
+    text-align: center;
+}
+h6 {
+    font-size: 22px;
+    color:#007bff;
+    align-items: center;
+    text-align: center;
+}
+a {
+    color: rgb(173, 241, 255);
+}
+span {
+    font-size: 100px;
+} 
+ul {
+    padding: 0;
+}
+li{
+    font-size: 20px;
+    list-style: none;
+}
+.card{
+    margin: 18px;
+    border-radius: 10%;
+}
+.card-header{
+    background-color: white;
+}
+.employee-icon {
+    height: 80px;
+    width: 80px;
+    align-items: center;
+}
+#nav{
+    text-align: center;
+    font-family:monospace;
+    color:#007bff;
+    font-weight: bolder;
+}

@@ -9,6 +9,7 @@ describe("Engineer", () => {
     })
     // verify engineer role
     it("should set id when created", () => {
+        const github = "puentedg";
         const engineer = new Engineer(("Gabriella",123,"puentedg@gmail.com",github));
         expect(engineer.getRole()).toBe("Engineer");
     })
